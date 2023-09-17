@@ -1,14 +1,14 @@
 import "./App.css";
 import Alert from "./components/Alert";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, {useState} from 'react';
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route
-// } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -56,7 +56,7 @@ function App() {
     <>
 
       {/* it is used when we use react router */}
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Navbar title="TextConverter" about="About Us" mode={mode} toggleMode={toggleMode} btnText={btnText}/>
         <Alert alertBox={alert} />
 
@@ -67,11 +67,11 @@ function App() {
           <Route exact path="/" element={<TextForm heading="Enter Your Text to Modify..." mode={mode} showAlert={showAlert} />}>
           </Route>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
 
-      <Navbar title="TextConverter" about="About Us" mode={mode} toggleMode={toggleMode} btnText={btnText}/>
+      {/* <Navbar title="TextConverter" about="About Us" mode={mode} toggleMode={toggleMode} btnText={btnText}/>
       <Alert alertBox={alert} />
-      <TextForm heading="Enter Your Text to Modify..." mode={mode} showAlert={showAlert} />
+      <TextForm heading="Enter Your Text to Modify..." mode={mode} showAlert={showAlert} /> */}
       {/* <About /> */}
     </>
   );

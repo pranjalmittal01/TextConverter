@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // basically props are working as the parameters it means we pass the parameters and give the value according to our need....
 export default function Navbar(props) {
@@ -8,12 +8,12 @@ export default function Navbar(props) {
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
           {/* for react router we use this syntax for link */}
-          {/* <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/">
             {props.title}
-          </Link> */}
-          <a className="navbar-brand" href="/">
+          </Link>
+          {/* <a className="navbar-brand" href="/">
             {props.title}
-          </a>
+          </a> */}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -23,21 +23,21 @@ export default function Navbar(props) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 {/* for react router we use this syntax for link */}
-                {/* <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </Link> */}
-                <a className="nav-link active" aria-current="page" href="/">
+                </Link>
+                {/* <a className="nav-link active" aria-current="page" href="#">
                   Home
-                </a>
+                </a> */}
               </li>
               <li className="nav-item">
                 {/* for react router we use this syntax for link */}
-                {/* <Link className="nav-link" to="/about">
+                <Link className="nav-link" to="/about">
                   {props.about}
-                </Link> */}
-                <a className="nav-link" href="/">
+                </Link>
+                {/* <a className="nav-link" href="#">
                   {props.about}
-                </a>
+                </a> */}
               </li>
             </ul>
  
