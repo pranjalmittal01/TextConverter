@@ -33,7 +33,7 @@ function App() {
       document.body.style.backgroundColor = '#042743';
       setBtnText("Disable Dark Mode");
       showAlert("Dark Mode has been enabled", "success");
-      document.title = "TextConverter - Dark Mode";
+      // document.title = "TextConverter - Dark Mode";
 
       // it is doing by the developer to confuse user & install their app in your system
       // setInterval(() => {
@@ -49,7 +49,7 @@ function App() {
       document.body.style.backgroundColor = 'white';
       setBtnText("Enable Dark Mode");
       showAlert("Light Mode has been enabled", "success");
-      document.title = "TextConverter - Light Mode";
+      // document.title = "TextConverter - Light Mode";
     }
   }
   return (
@@ -61,10 +61,10 @@ function App() {
         <Alert alertBox={alert} />
 
         <Routes>
-          <Route exact path="/about" element={<About />}>
+          <Route exact path="/about" element={<About mode={mode} />}>
           </Route>
           
-          <Route exact path="/" element={<TextForm heading="Enter Your Text to Modify..." mode={mode} showAlert={showAlert} />}>
+          <Route exact path="/" element={<TextForm heading="Try TextConverter - Word Counter, Character Counter" mode={mode} showAlert={showAlert} />}>
           </Route>
         </Routes>
       </BrowserRouter>
