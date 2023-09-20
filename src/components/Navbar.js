@@ -23,7 +23,7 @@ export default function Navbar(props) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 {/* for react router we use this syntax for link */}
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link" aria-current="page" to="/">
                   Home
                 </Link>
                 {/* <a className="nav-link active" aria-current="page" href="#">

@@ -75,7 +75,7 @@ export default function About(props) {
           <div id="collapseThree" className="accordion-collapse collapse"
             data-bs-parent="#accordionExample">
             {/* <div className="accordion-body" style={myStyle}> */}
-            <div className="accordion-body">
+            <div className="accordion-body" style={myStyle}>
               This word counter software works in any web browsers such as Chrome, FireFox, Internet Explorer, Safari, Opera and so on. It suits to count character in Facebook, Blog, Books, Excel Document, PDF Document, Essays etc....
             </div>
           </div>

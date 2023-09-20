@@ -23,10 +23,10 @@ export default function TextForm(props) {
   }
 
   const handleCopy = () => {
-    var text = document.getElementById('myBox');
-    text.select();
-    document.getSelection().removeAllRanges();
-    navigator.clipboard.writeText(text.value);
+    // var text = document.getElementById('myBox');
+    // text.select();
+    // document.getSelection().removeAllRanges();
+    navigator.clipboard.writeText(text);
     props.showAlert("Copied to clipboard!", "success");
   }
 
@@ -65,7 +65,7 @@ export default function TextForm(props) {
       {/* <p>{text.split(" ").length>1?text.split(" ").length-1:0} Words and {text.length} Characters</p> */}
 
       {/* by filter method we can remove the counting of spaces in word section */}
-      <p>{text.split(" ").filter((element) => {return element.length!==0}).length} Words and {text.length} Characters</p>
+      <p>{text.split(/\s+/).filter((element) => {return element.length!==0}).length} Words and {text.length} Characters</p>
       <p>{0.008 * text.split(" ").filter((element) => {return element.length!==0}).length} Minutes to Read Only</p>
       <h2>Preview</h2>
       <p>{text.length>0 ? text : "Nothing to Preview!"}</p>
